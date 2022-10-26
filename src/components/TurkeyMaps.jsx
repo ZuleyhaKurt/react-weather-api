@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import TurkeyMap from 'turkey-map-react';
 
 
 
-const Turkeymaps = ({ dataApp,setDataApp,city,setCity }) => {
+const TurkeyMaps = ({ dataApp,setDataApp,citys,setCitys }) => {
     const [cityName, setCityName] = useState("")
 
-   
+   const navigate = useNavigate()
     
     const handleClick = () => {
-        setCity(cityName.split(" ")[1])
+        setCitys(cityName.split(" ")[1])
+        navigate(`/`)
         }
 
     return (
@@ -28,4 +30,4 @@ const Turkeymaps = ({ dataApp,setDataApp,city,setCity }) => {
     )
 }
 
-export default Turkeymaps
+export default TurkeyMaps

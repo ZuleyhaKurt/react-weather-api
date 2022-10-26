@@ -5,6 +5,9 @@ import { useState} from "react";
 import Header from './components/Header';
 import Home from './components/Home';
 import TurkeyMaps from './components/TurkeyMaps';
+import TurkeyCities from './components/TurkeyCities';
+import Router from './components/Router';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -12,11 +15,13 @@ import TurkeyMaps from './components/TurkeyMaps';
 
 
 function App() {
-  const [city, setCity] = useState("Ankara")
-  const[dataApp,setDataApp]=useState({})
+  const [citys, setCitys] = useState("Ankara")
+  const [dataApp, setDataApp] = useState({})
+  
 
- console.log(city)
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8679780ea9ee4fcdc4514f93f08f4e3f&units=metric&lang=tr`
+
+ console.log(citys)
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${citys}&appid=8679780ea9ee4fcdc4514f93f08f4e3f&units=metric&lang=tr`
   
   const getWeather = async () => {
 
@@ -34,16 +39,14 @@ function App() {
 
   useEffect(() => {
     getWeather();
+  
 
-  } ,[city]);
+  } ,[citys]);
 console.log(dataApp)
 
   return (
     <div className="App">
-      <Header />
-      <Home dataApp={dataApp} setDataApp={setDataApp} city={city} setCity={setCity} />
-      <TurkeyMaps  dataApp={dataApp} setDataApp={setDataApp} city={city} setCity={setCity}/>
-    
+     <Router  dataApp={dataApp} setDataApp={setDataApp} citys={citys} setCitys={setCitys}/>
     </div>
   );
 }

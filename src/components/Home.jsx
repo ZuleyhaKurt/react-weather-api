@@ -1,16 +1,31 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
 
 
-const Home = ({ dataApp, setDataApp, city, setCity }) => {
+
+const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
   
 
+   const navigate= useNavigate()
+    
     console.log(dataApp)
+    if (!dataApp.weather) {
+        return <h1>Loading</h1>
+    }
     return (
         
     
         <>
-            
+            <div>
+            <Button variant="warning" className='m-1 w-20' onClick={()=>navigate(`/turkey-map`)}>
+            Turkey Map
+            </Button>
+            <Button variant="warning" className='m-1 w-20'onClick={()=>navigate(`/turkey-cities`)}>
+            List of Cities
+            </Button>
+            </div>
             <Card key={dataApp?.id} style={{ width: '50rem' }} className= "m-3">
         <Card.Body>
             <Card.Title className="mr-0">{dataApp?.name}</Card.Title>

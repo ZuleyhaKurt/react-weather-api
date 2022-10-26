@@ -2,30 +2,27 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
-  return (
+
+    return (
+      
    <>
-    <Navbar bg="light" variant="light">
-        <Container>
-            
-                  
-            <Nav className="me-auto">
-                <Nav.Link className=""  href="#home">Weather App</Nav.Link>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#Map">Turkey Map</Nav.Link>
-                <Nav.Link href="#List">Turkey Cities</Nav.Link>
+    <Navbar className=" d-flex justify-content-start " bg="light" variant="light">
+        <Container className=" d-flex justify-content-start mx-0">
+            <Nav className=" d-flex justify-content-start gap-5 " >
+                <Link className='text-decoration-none text-dark'  to="/">Bella </Link>  
+                <Link className='text-decoration-none text-dark'  to="/">Weather App</Link>  
+               <Link className='text-decoration-none text-dark' to="/">Home</Link> 
+               <Link className='text-decoration-none text-dark' to="/turkey-map">Turkey Map</Link>  
+                <Link className='text-decoration-none text-dark' to="/turkey-cities">Turkey Cities</Link>  
             </Nav>
         </Container>
     </Navbar>
     <div >
-            <Button variant="warning" className='m-1 w-20'>
-            Turkey Map
-            </Button>
-            <Button variant="warning" className='m-1 w-20'>
-            List of Countries
-            </Button>
+            
             
     </div>
 </>
