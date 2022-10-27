@@ -98,6 +98,10 @@ margin: 0;}
 }
 .cardbox .humidity{
   margin: 0 !important;
-  padding: 0 !important;
+  padding-left: 0.9rem !important;
+}
+.cardbox .speed{
+  display: flex;
+  
 }
 }

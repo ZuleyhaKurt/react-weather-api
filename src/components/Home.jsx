@@ -41,13 +41,13 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
                         <p className="text-center">{dataApp?.weather[0].description}</p>
             </Card.Subtitle>
             <Card.Text className="text-dark d-flex justify-content-between">
-                <Card.Text>
+                <Card.Text className= "speed">
                     <Card.Text>
                     {dataApp?.speed}km/h
                     </Card.Text>
                     <Card.Text className='humidity'>
-                       {dataApp?.humidity} %
-                    </Card.Text>
+                    {dataApp?.humidity}%
+                </Card.Text>
                 </Card.Text>
                 <Card.Text>
                 <img className='icon' src={url} alt="" />
