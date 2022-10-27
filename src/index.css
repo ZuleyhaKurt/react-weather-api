@@ -45,7 +45,7 @@ code {
 }
 .list-item:hover{
   transform: scale(120%);
-  color:rgb(255,193,7);
+  color:rgb(255,193,7) !important;
  
 }
 .head{

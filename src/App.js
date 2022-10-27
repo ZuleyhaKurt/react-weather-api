@@ -18,10 +18,12 @@ function App() {
   const [citys, setCitys] = useState("Ankara")
   const [dataApp, setDataApp] = useState({})
   
-
+  const APP_ID =process.env.REACT_APP_API_ID;
+  console.log(APP_ID)
+  
 
  console.log(citys)
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${citys}&appid=8679780ea9ee4fcdc4514f93f08f4e3f&units=metric&lang=tr`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${citys}&appid=${APP_ID}&units=metric&lang=tr`
   
   const getWeather = async () => {
 

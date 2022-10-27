@@ -16,8 +16,7 @@ const handleSubmit = (e) => {
   console.log(city);
   console.log(citys);
 
-  return
-  (
+  return (
     <div className='d-flex justify-content-center'>
     <Form.Group className="mt-5 d-flex gap-3 align-items-center" style={{ width: '40rem' }} >
         <Form.Select  value={city} onChange={(e) => {setCity(e.target.value)}}>
