@@ -13,10 +13,9 @@ const Header = () => {
     <Navbar className=" d-flex justify-content-start navlist "  variant="light">
         <Container className=" d-flex justify-content-start mx-0 ">
             <Nav className=" d-flex justify-content-start gap-5 " >
-                        <Link className='list-item text-decoration-none text-white' to="/">
+                        <Link className='list-item text-decoration-none text-white'  to="/">
                             <b>Bella Swan</b> </Link>  
-                <Link className='list-item text-decoration-none text-white'  to="/">Weather App</Link>  
-               <Link className='list-item text-decoration-none text-white' to="/">Home</Link> 
+                <Link className='list-item text-decoration-none text-white' to="/">Home</Link> 
                <Link className='list-item text-decoration-none text-white' to="/turkey-map">Turkey Map</Link>  
                 <Link className='list-item text-decoration-none text-white' to="/turkey-cities">Turkey Cities</Link>  
             </Nav>

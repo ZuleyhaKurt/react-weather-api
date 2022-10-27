@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,6 +8,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: aqua;
+  height: 100vh;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100vw;
   height: 100vh;
 }
 .App{
@@ -24,6 +35,7 @@ code {
   padding: 0.7rem 0.5rem;
   font-size: 1.2rem;
   transition: all 0.5s;
+  font-family: 'Roboto Mono', monospace;
 }
 .list-item:hover{
   transform: scale(120%);
@@ -50,4 +62,7 @@ code {
   border-radius: 5px;
   outline: none;
   border: none;
+}
+.tempature{
+  font-size: 3rem !important;
 }

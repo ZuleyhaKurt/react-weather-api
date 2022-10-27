@@ -9,15 +9,17 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
   
 
    const navigate= useNavigate()
+   
     
     console.log(dataApp)
     if (!dataApp.weather) {
         return <h1>Loading</h1>
     }
+    const url=`http://openweathermap.org/img/wn/${dataApp?.weather[0].icon}.png`
     return (
         
     
-        <div className="fullbody w-100 h-100">
+        <div className="fullbody">
             <div className="text-center head ">
             <h1>Welcome</h1>
             <p>Click for the other cities' weather.</p>
@@ -35,8 +37,8 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
         <Card.Body className='text-center'>
             <Card.Title className="mr-0">{dataApp?.name}</Card.Title>
             <Card.Subtitle className="text-dark my-5">
-                        <h2 className="text-center">{dataApp?.temp}°C</h2>
-                       
+                        <h1 className="text-center tempature">{dataApp?.temp}°C</h1>
+                        <p className="text-center">{dataApp?.weather[0].description}</p>
             </Card.Subtitle>
             <Card.Text className="text-dark d-flex justify-content-between">
                 <Card.Text>
@@ -47,8 +49,8 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
                        {dataApp?.humidity} %
                     </Card.Text>
                 </Card.Text>
-                <Card.Text className="text-dark ">
-                    {dataApp?.weather[0].description}
+                <Card.Text>
+                <img className='icon' src={url} alt="" />
                 </Card.Text>
             </Card.Text>
         </Card.Body>
@@ -56,6 +58,7 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
                 </div>
              
    
+     
          
             
          
