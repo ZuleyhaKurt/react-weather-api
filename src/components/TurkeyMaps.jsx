@@ -15,9 +15,9 @@ const TurkeyMaps = ({ dataApp,setDataApp,citys,setCitys }) => {
         }
 
     return (
-        <div className='bg-secondary w-100 h-100 my-0'>
+        <div >
             <div>
-                <h3 className='text-center text-danger mt-3'>{cityName}</h3>
+                <h3 className='text-center text-white mt-3'>{cityName}</h3>
             </div>
             <TurkeyMap
                 hoverable={true}

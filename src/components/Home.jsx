@@ -25,10 +25,10 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
             <p>Click for the other cities' weather.</p>
             </div>
             <div className='text-center'>
-            <Button variant="dark" className='m-1 w-20  link-item' onClick={()=>navigate(`/turkey-map`)}>
+            <Button variant="dark" className='m-1 w-20 px-4 link-item' onClick={()=>navigate(`/turkey-map`)}>
             Turkey Map
             </Button>
-            <Button variant="dark" className='m-1 w-20 link-item 'onClick={()=>navigate(`/turkey-cities`)}>
+            <Button variant="dark" className='m-1 w-20 px-4 link-item 'onClick={()=>navigate(`/turkey-cities`)}>
             List of Cities
             </Button>
             </div>
@@ -36,7 +36,7 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
             <Card key={dataApp?.id} style={{ width: '40rem' }} className= "m-3 cardbox">
         <Card.Body className='text-center'>
             <Card.Title className="mr-0">{dataApp?.name}</Card.Title>
-            <Card.Subtitle className="text-dark my-5">
+            <Card.Subtitle className="text-dark my-5 subtitle">
                         <h1 className="text-center tempature">{dataApp?.temp}°C</h1>
                         <p className="text-center">{dataApp?.weather[0].description}</p>
             </Card.Subtitle>
@@ -45,7 +45,7 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
                     <Card.Text>
                     {dataApp?.speed}km/h
                     </Card.Text>
-                    <Card.Text>
+                    <Card.Text className='humidity'>
                        {dataApp?.humidity} %
                     </Card.Text>
                 </Card.Text>

@@ -35,14 +35,18 @@ code {
   padding: 0.7rem 0.5rem;
   font-size: 1.2rem;
   transition: all 0.5s;
+  letter-spacing: 0.3rem;
  
 }
 .bella{
   font-family: 'Roboto Mono', monospace;
+
+ 
 }
 .list-item:hover{
   transform: scale(120%);
-  color:rgb(255,193,7)
+  color:rgb(255,193,7);
+ 
 }
 .head{
   color: orangered;
@@ -55,6 +59,7 @@ code {
 .link-item:hover{
   background-color: orange !important;
   transform: scale(110%);
+
 }
 .cardbox{
   background-color: orange!important;
@@ -68,4 +73,31 @@ code {
 }
 .tempature{
   font-size: 3rem !important;
+}
+
+@media  (max-width:600px){
+.list-item{font-size:0.8rem;}
+*{box-sizing: border-box;
+padding: 0;
+margin: 0;}
+.list-item:nth-child(3){
+  display: none;
+}
+.list-item:nth-child(4){
+  display: none;
+}
+.list-item:nth-child(2){
+    display: none;
+}
+.cardbox{
+  height: 200px !important;
+
+}
+.cardbox .subtitle{
+  margin: 0 !important;
+}
+.cardbox .humidity{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 }
