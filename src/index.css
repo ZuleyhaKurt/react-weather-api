@@ -5,9 +5,49 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aqua;
+  height: 100vh;
 }
-
+.App{
+  width: 100vw;
+  height: 100vh;
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.navlist{
+ background-color: rgba(128, 128, 128, 0.616);
+}
+.list-item{
+  padding: 0.7rem 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+}
+.list-item:hover{
+  transform: scale(120%);
+  color:rgb(255,193,7)
+}
+.head{
+  color: orangered;
+  margin-bottom: 2.rem;
+  font-size: 2rem;
+}
+.head h1{
+  font-size: 4rem;
+}
+.link-item:hover{
+  background-color: orange !important;
+  transform: scale(110%);
+}
+.cardbox{
+  background-color: orange!important;
+}
+.submitbutton{
+  background-color:orange ;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

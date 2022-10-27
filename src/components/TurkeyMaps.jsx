@@ -15,16 +15,15 @@ const TurkeyMaps = ({ dataApp,setDataApp,citys,setCitys }) => {
         }
 
     return (
-        <div>
+        <div className='bg-secondary w-100 h-100 my-0'>
             <div>
-                <h3 className='text-center text-danger mt-3'>{cityName}</h3></div>
+                <h3 className='text-center text-danger mt-3'>{cityName}</h3>
+            </div>
             <TurkeyMap
                 hoverable={true}
                 customStyle={{ idleColor: "#dc3522", hoverColor:"#eeee"  }}
                 onHover={({ plateNumber, name }) => setCityName(plateNumber +" " +name)}
                 onClick={handleClick}
-
-                
             />
         </div>
     )

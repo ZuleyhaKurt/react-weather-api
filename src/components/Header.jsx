@@ -10,14 +10,15 @@ const Header = () => {
     return (
       
    <>
-    <Navbar className=" d-flex justify-content-start " bg="light" variant="light">
-        <Container className=" d-flex justify-content-start mx-0">
+    <Navbar className=" d-flex justify-content-start navlist "  variant="light">
+        <Container className=" d-flex justify-content-start mx-0 ">
             <Nav className=" d-flex justify-content-start gap-5 " >
-                <Link className='text-decoration-none text-dark'  to="/">Bella </Link>  
-                <Link className='text-decoration-none text-dark'  to="/">Weather App</Link>  
-               <Link className='text-decoration-none text-dark' to="/">Home</Link> 
-               <Link className='text-decoration-none text-dark' to="/turkey-map">Turkey Map</Link>  
-                <Link className='text-decoration-none text-dark' to="/turkey-cities">Turkey Cities</Link>  
+                        <Link className='list-item text-decoration-none text-white' to="/">
+                            <b>Bella Swan</b> </Link>  
+                <Link className='list-item text-decoration-none text-white'  to="/">Weather App</Link>  
+               <Link className='list-item text-decoration-none text-white' to="/">Home</Link> 
+               <Link className='list-item text-decoration-none text-white' to="/turkey-map">Turkey Map</Link>  
+                <Link className='list-item text-decoration-none text-white' to="/turkey-cities">Turkey Cities</Link>  
             </Nav>
         </Container>
     </Navbar>

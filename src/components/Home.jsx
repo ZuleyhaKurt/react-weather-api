@@ -17,37 +17,43 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
     return (
         
     
-        <>
-            <div>
-            <Button variant="warning" className='m-1 w-20' onClick={()=>navigate(`/turkey-map`)}>
+        <div className="fullbody w-100 h-100">
+            <div className="text-center head ">
+            <h1>Welcome</h1>
+            <p>Click for the other cities' weather.</p>
+            </div>
+            <div className='text-center'>
+            <Button variant="dark" className='m-1 w-20  link-item' onClick={()=>navigate(`/turkey-map`)}>
             Turkey Map
             </Button>
-            <Button variant="warning" className='m-1 w-20'onClick={()=>navigate(`/turkey-cities`)}>
+            <Button variant="dark" className='m-1 w-20 link-item 'onClick={()=>navigate(`/turkey-cities`)}>
             List of Cities
             </Button>
             </div>
-            <Card key={dataApp?.id} style={{ width: '50rem' }} className= "m-3">
-        <Card.Body>
+            <div className="d-flex justify-content-center">
+            <Card key={dataApp?.id} style={{ width: '40rem' }} className= "m-3 cardbox">
+        <Card.Body className='text-center'>
             <Card.Title className="mr-0">{dataApp?.name}</Card.Title>
-            <Card.Subtitle className="text-muted my-5">
+            <Card.Subtitle className="text-dark my-5">
                         <h2 className="text-center">{dataApp?.temp}°C</h2>
-                        <p className="text-center"></p>
+                       
             </Card.Subtitle>
-            <Card.Text className="text-muted d-flex justify-content-between">
+            <Card.Text className="text-dark d-flex justify-content-between">
                 <Card.Text>
                     <Card.Text>
                     {dataApp?.speed}km/h
                     </Card.Text>
                     <Card.Text>
-                       {dataApp?.humidity}
+                       {dataApp?.humidity} %
                     </Card.Text>
                 </Card.Text>
-                <Card.Text className="text-muted ">
+                <Card.Text className="text-dark ">
                     {dataApp?.weather[0].description}
                 </Card.Text>
             </Card.Text>
         </Card.Body>
-    </Card> 
+                </Card> 
+                </div>
              
    
          
@@ -57,7 +63,7 @@ const Home = ({ dataApp, setDataApp, citys, setCitys }) => {
        
                
            
-      </> 
+                </div>
   )
 }
 

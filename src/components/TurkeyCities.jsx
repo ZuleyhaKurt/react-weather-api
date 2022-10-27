@@ -16,18 +16,18 @@ const handleSubmit = (e) => {
   console.log(city);
   console.log(citys);
 
-  return (
-    <>
+  return(
+    <div className='d-flex justify-content-center'>
     <Form.Group className="mt-5 d-flex gap-3 align-items-center" style={{ width: '40rem' }} >
         <Form.Select  value={city} onChange={(e) => {setCity(e.target.value)}}>
             {cities.map(city => (
                 <option value={city}> {city} </option>
             ))}
         </Form.Select>
-        {/* <Button style={{ width: '5rem' }} type="submit" value="Submit"  >Submit</Button> */}
-        <button type="submit" value="Submit" onClick={handleSubmit}>Submit</button>
+       
+        <button className='submitbutton' type="submit" value="Submit" onClick={handleSubmit}>Submit</button>
     </Form.Group>
-    </>
+    </div>
       
   )
 }

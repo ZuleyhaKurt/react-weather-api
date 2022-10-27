@@ -45,7 +45,7 @@ function App() {
 console.log(dataApp)
 
   return (
-    <div className="App">
+    <div className="App bg-secondary ">
      <Router  dataApp={dataApp} setDataApp={setDataApp} citys={citys} setCitys={setCitys}/>
     </div>
   );
