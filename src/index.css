@@ -35,6 +35,9 @@ code {
   padding: 0.7rem 0.5rem;
   font-size: 1.2rem;
   transition: all 0.5s;
+ 
+}
+.bella{
   font-family: 'Roboto Mono', monospace;
 }
 .list-item:hover{
